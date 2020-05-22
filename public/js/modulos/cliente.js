@@ -48,7 +48,6 @@ var editar = function (tbody, table) {
   });
 };
 
-/**/
 var guardar = function () {
   $("form").on("submit", function (e) {
     e.preventDefault();
