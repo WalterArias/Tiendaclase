@@ -1,5 +1,4 @@
 const RUTA_URL = "http://localhost:8080/tiendaclase/cliente/";
-
 var listarcliente = function () {
   var tabla = $("#mitabla").DataTable({
     ajax: {
@@ -19,14 +18,29 @@ var listarcliente = function () {
         defaultContent:
           "<button type='button' class ='imprimir btn btn-secondary' data-toggle='tooltip' data-placement='top' title='Imprimir'> <i class='icon-print'></i></button>",
       },
-      { data: "idcliente" },
-      { data: "clientenombre" },
-      { data: "clienteapellidos" },
+      {
+        data: "idcliente",
+      },
+      {
+        data: "clientenombre",
+      },
+      {
+        data: "clienteapellidos",
+      },
     ],
     columnDefs: [
-      { width: "5%", targets: 0 },
-      { width: "5%", targets: 1 },
-      { width: "5%", targets: 2 },
+      {
+        width: "5%",
+        targets: 0,
+      },
+      {
+        width: "5%",
+        targets: 1,
+      },
+      {
+        width: "5%",
+        targets: 2,
+      },
     ],
   });
   editar("#mitabla tbody", tabla);
