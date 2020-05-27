@@ -12,6 +12,8 @@
             </div>
 
             <div class="col-md-11">
+
+
                 <div class="card" id="vistatabla">
                     <div class="card-header">
                         <b>Cliente</b> <button type="button" id="nuevo" class="btn btn-success" data-toggle='tooltip'
@@ -83,6 +85,7 @@
 
                                 <input id="guardar" class="btn btn-success" type="submit" value="Guardar">
                         </form>
+
                     </div>
 
                 </div>

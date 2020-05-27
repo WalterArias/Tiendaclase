@@ -44,6 +44,7 @@ var listarcliente = function () {
     ],
   });
   editar("#mitabla tbody", tabla);
+  eliminar("#mitabla tbody", tabla);
 };
 
 var nuevo = function () {
@@ -74,11 +75,12 @@ var guardar = function () {
       contentType: false,
     })
       .done(function (data) {
-        console.log(data);
-        //aca iran los mensajes
+        alert("Accion Realizada con exito !");
+        mostrarForm(false);
       })
       .fail(function (data) {
-        console.log(data);
+        alert("operacion fallida !");
+        mostrarForm(false);
       });
   });
 };
@@ -107,10 +109,18 @@ var mostrarForm = function (estado) {
   }
 };
 
+var eliminar = function (tbody, table) {
+  $(tbody).on("click", "button.eliminar", function () {
+    var dato = table.row($(this).parents("tr")).data();
+    ConfirmDialog("Are you sure");
+  });
+};
+
 $(document).ready(function () {
   listarcliente();
   nuevo();
   editar();
+  eliminar();
   guardar();
   cancelar();
   limpiar();
