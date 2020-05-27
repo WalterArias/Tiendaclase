@@ -74,4 +74,22 @@ class Cliente extends Controlador
             echo json_encode($datos);
         }
     }
+   
+
+
+    /*
+    Método que Elimina un cliente en la base de datos, usando el modelo correspondiente
+    @param El id del cliente que llegan del formulario
+    @return Respuesta de la base de datos en formato JSON para JS
+    @throws Respuesta Negativa de la base de datos
+    */
+    public function eliminarCliente()
+    {
+        $datos =[
+            'id_cliente' => $_POST['id']
+        ];
+
+        $datos = $this->clientemodelo->eliminarCliente($datos);
+        echo json_encode($datos);
+    }
 }

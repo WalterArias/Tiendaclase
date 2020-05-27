@@ -112,7 +112,28 @@ var mostrarForm = function (estado) {
 var eliminar = function (tbody, table) {
   $(tbody).on("click", "button.eliminar", function () {
     var dato = table.row($(this).parents("tr")).data();
-    ConfirmDialog("Are you sure");
+    var respuesta = confirm(
+      "Seguro que desea eliminar : " +
+        dato.clientenombre +
+        " " +
+        dato.clienteapellidos
+    );
+    if (respuesta) {
+      $.ajax({
+        method: "POST",
+        url: RUTA_URL + "eliminarCliente",
+        data: { id: dato.idcliente },
+      })
+        .done(function (data) {
+          alert("Accion Realizada con exito !");
+          $("#mitabla").DataTable().ajax.reload();
+        })
+        .fail(function (data) {
+          alert("operacion fallida !");
+        });
+    } else {
+      alert("Operacion cancelada por el usuario.");
+    }
   });
 };
 

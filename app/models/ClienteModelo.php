@@ -75,16 +75,17 @@ class ClienteModelo
             return 'Error en la actualización';
         }
     }
-    /*
-             public function eliminarUsuario($datos) {
-             	$this->db->query('DELETE FROM usuarios WHERE id_usuario = :id');
-             	$this->db->bind(':id', $datos['id_usuario']);
+    
+    public function eliminarCliente($datos)
+    {
+        $this->db->query('DELETE FROM cliente WHERE idcliente = :id');
+        $this->db->bind(':id', $datos['id_cliente']);
 
-             	// Ejecutar
-             	if ($this->db->execute()){
-             		return true;
-             	} else {
-             		return false;
-             	}
-             } */
+        // Ejecutar
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
