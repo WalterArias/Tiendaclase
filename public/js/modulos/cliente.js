@@ -67,6 +67,7 @@ var guardar = function () {
   $("form").on("submit", function (e) {
     e.preventDefault();
     var datos = new FormData($("form")[0]);
+    console.log(datos);
     $.ajax({
       method: "POST",
       url: RUTA_URL + "crearCliente",
@@ -113,7 +114,7 @@ var eliminar = function (tbody, table) {
   $(tbody).on("click", "button.eliminar", function () {
     var dato = table.row($(this).parents("tr")).data();
     var respuesta = confirm(
-      "Seguro que desea eliminar : " +
+      "Seguro que desea eliminar ? : " +
         dato.clientenombre +
         " " +
         dato.clienteapellidos
