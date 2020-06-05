@@ -78,6 +78,7 @@ var guardar = function () {
       .done(function (data) {
         alert("Accion Realizada con exito !");
         mostrarForm(false);
+        $("#mitabla").DataTable().ajax.reload();
       })
       .fail(function (data) {
         alert("operacion fallida !");
