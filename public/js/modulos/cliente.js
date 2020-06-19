@@ -69,8 +69,8 @@ var guardar = function () {
     var datos = new FormData($("form")[0]);
     console.log(datos);
     $.ajax({
-      method: "POST",
       url: RUTA_URL + "crearCliente",
+      method: "POST",
       data: datos,
       processData: false,
       contentType: false,

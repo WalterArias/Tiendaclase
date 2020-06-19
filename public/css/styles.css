@@ -1,3 +1,9 @@
+footer {
+  padding: 25px;
+  background-color: #050505;
+  color: #a9a9a9;
+}
+
 form.formeditar input[type="text"] {
   width: 80%;
   height: 2%;
