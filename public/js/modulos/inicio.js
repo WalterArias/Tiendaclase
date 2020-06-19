@@ -1,10 +1,10 @@
-const RUTA_URL = "http://localhost:8080/tiendaclase/vcbvcusuario/";
+const RUTA_URL = "http://localhost:8080/tiendaclase/home/";
 var enviar = function () {
-  $("#frmldddogin").on("submit", function (e) {
+  $("#frmlogin").on("submit", function (e) {
     e.preventDefault();
-    var datos = new FormData($("frmlogin")[0]);
+    var datos = new FormData($("#frmlogin")[0]);
     $.ajax({
-      url: RUTA_URL + "indeddx",
+      url: RUTA_URL + "ValidarIngreso",
       method: "POST",
       data: datos,
       processData: false,
