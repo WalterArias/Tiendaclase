@@ -1,21 +1,20 @@
-const RUTA_URL = "http://localhost:8080/tiendaclase/home/";
+const RUTA_URL = "http://localhost:8080/tiendaclase/";
 var enviar = function () {
   $("#frmlogin").on("submit", function (e) {
     e.preventDefault();
     var datos = new FormData($("#frmlogin")[0]);
     $.ajax({
-      url: RUTA_URL + "ValidarIngreso",
+      url: RUTA_URL + "home/ValidarIngreso",
       method: "POST",
       data: datos,
       processData: false,
-      contentType: false,
+      contentType: false
     })
       .done(function (data) {
-        console.log(data);
+        window.location.href = RUTA_URL + "admin";
       })
       .fail(function (data) {
         alert("operacion fallida !");
-        mostrarForm(false);
       });
   });
 };

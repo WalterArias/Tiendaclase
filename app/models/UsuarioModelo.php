@@ -90,8 +90,8 @@ class UsuarioModelo
     }
     public function validarIngreso($datos)
     {
-        $this->db->query('SELECT FROM Usuario WHERE idUsuario = :id AND usuario_pass = :password');
-        $this->db->bind(':id', $datos['usuario']);
+        $this->db->query('SELECT * FROM Usuario WHERE usuario_login = :usuario && usuario_pass = :password');
+        $this->db->bind(':usuario', $datos['usuario']);
         $this->db->bind(':password', $datos['password']);
 
         // Ejecutar

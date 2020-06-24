@@ -18,10 +18,10 @@
                'usuario' => $_POST['usuario'],
                'password' =>  $_POST['password']];
             $datos = $this->usuariomodelo->validarIngreso($datos);
-            if ($datos = true) {
-                $this->vista('Admin/Adminvista');
+            if ($datos == true) {
+                echo json_encode($datos);
             } else {
-                echo  jsonencode('error en la validacion !');
+                echo json_encode($datos);
             }
         }
     }
