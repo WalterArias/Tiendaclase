@@ -96,9 +96,10 @@ class UsuarioModelo
 
         // Ejecutar
         if ($this->db->execute()) {
-            return true;
+            $resultados = $this->db->registros();
+            return $resultados;
         } else {
-            return false;
+            return 'no';
         }
     }
 }

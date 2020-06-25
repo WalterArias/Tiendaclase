@@ -8,10 +8,15 @@ var enviar = function () {
       method: "POST",
       data: datos,
       processData: false,
-      contentType: false
+      contentType: false,
     })
       .done(function (data) {
-        window.location.href = RUTA_URL + "admin";
+        if (data == "ok") {
+          console.log(data);
+          window.location.href = RUTA_URL + "admin";
+        } else {
+          alert("el usuario o la clave NO coinciden!");
+        }
       })
       .fail(function (data) {
         alert("operacion fallida !");
