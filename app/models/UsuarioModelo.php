@@ -88,18 +88,25 @@ class UsuarioModelo
             return false;
         }
     }
+    /**
+     * validarIngreso
+     *
+     * @param  mixed $datos
+     * @return void
+     */
     public function validarIngreso($datos)
     {
-        $this->db->query('SELECT * FROM Usuario WHERE usuario_login = :usuario && usuario_pass = :password');
+        $this->db->query('SELECT * FROM Usuario WHERE usuario_login = :usuario ');
         $this->db->bind(':usuario', $datos['usuario']);
-        $this->db->bind(':password', $datos['password']);
-
-        // Ejecutar
-        if ($this->db->execute()) {
-            $resultados = $this->db->registros();
-            return $resultados;
+        $resultados = $this->db->registros();
+        if (count($resultados) <= 0) {
+            return false;
         } else {
-            return 'no';
+            if (password_verify($resultados->usuario_pass, $datos['password'])) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }

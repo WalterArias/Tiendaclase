@@ -11,11 +11,10 @@ var enviar = function () {
       contentType: false,
     })
       .done(function (data) {
-        if (data == "ok") {
-          console.log(data);
-          window.location.href = RUTA_URL + "admin";
-        } else {
+        if (data == "false") {
           alert("el usuario o la clave NO coinciden!");
+        } else {
+          window.location.href = RUTA_URL + "admin";
         }
       })
       .fail(function (data) {
