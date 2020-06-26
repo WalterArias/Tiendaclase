@@ -99,10 +99,10 @@ class UsuarioModelo
         $this->db->query('SELECT * FROM Usuario WHERE usuario_login = :usuario ');
         $this->db->bind(':usuario', $datos['usuario']);
         $resultados = $this->db->registros();
-        if (count($resultados) <= 0) {
+        if (count($resultados)<=0) {
             return false;
         } else {
-            if (password_verify($resultados->usuario_pass, $datos['password'])) {
+            if (password_verify($datos['password'], $resultados[0]->usuario_pass)) {
                 return true;
             } else {
                 return false;
