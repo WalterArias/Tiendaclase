@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="<?php echo RUTA_URL; ?>/css/skins/skin-blue.min.css">
     <link rel="stylesheet" href="<?php echo RUTA_URL; ?>/css/styles.css">
 
-
-
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -124,32 +122,32 @@
                     <li class="header">Menu Principal</li>
                     <!-- Optionally, you can add icons to the links -->
                     <li class="active">
-                        <a href="<?php echo RUTA_URL . 'aprendiz/inicio' ?>">
+                        <a href="<?php echo RUTA_URL . '/admin' ?>">
                             <i class="icon-compass"></i>
                             <span>Inicio</span></a>
                     </li>
                     <li class="item">
-                        <a href="<?php echo RUTA_URL . 'aprendiz/inicio' ?>">
+                        <a href="<?php echo RUTA_URL . '/cliente' ?>">
                             <i class="icon-male"></i>
                             <span>Clientes</span></a>
                     </li>
                     <li class="item">
-                        <a href="<?php echo RUTA_URL . 'aprendiz/inicio' ?>">
+                        <a href="<?php echo RUTA_URL . '/admin' ?>">
                             <i class="icon-tags"></i>
                             <span>Categorias</span></a>
                     </li>
                     <li class="item">
-                        <a href="<?php echo RUTA_URL . 'aprendiz/inicio' ?>">
+                        <a href="<?php echo RUTA_URL . '/admin' ?>">
                             <i class="icon-tasks"></i>
                             <span>Productos</span></a>
                     </li>
                     <li class="item">
-                        <a href="<?php echo RUTA_URL . 'aprendiz/inicio' ?>">
+                        <a href="<?php echo RUTA_URL . '/admin' ?>">
                             <i class="icon-shopping-cart"></i>
                             <span>Pedidos</span></a>
                     </li>
                     <li class="item">
-                        <a href="<?php echo RUTA_URL . 'aprendiz/inicio' ?>">
+                        <a href="<?php echo RUTA_URL . '/admin' ?>">
                             <i class="icon-print"></i>
                             <span>Reportes</span></a>
                     </li>
