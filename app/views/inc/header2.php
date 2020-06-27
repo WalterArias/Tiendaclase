@@ -46,64 +46,58 @@
                 <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                     <span class="sr-only">Toggle navigation</span>
                 </a>
-                <!-- Navbar Right Menu -->
+
+
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
-                        <!-- Messages: style can be found in dropdown.less-->
 
-                        <!-- User Account Menu -->
                         <li class="dropdown user user-menu">
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <!-- The user image in the navbar-->
-                                <img src="<?php echo RUTA_URL . '/public/imgs/user7-128x128.jpg' ?>" class="user-image"
-                                    alt="User Image">
-                                Usuario
-
+                                <?php
+                                echo $_SESSION['nombre']
+                                ?>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
-                                    <img src="<?php echo RUTA_URL . '/public/imgs/user7-128x128.jpg' ?>"
-                                        class="img-circle" alt="User Image">
+                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                     <p>
-                                        SENNOVA- Web Developer
-                                        <small>Centro de Tecnologias Agroindustriales Cartago - Valle</small>
+                                        <?php
+                                        echo $_SESSION['nombre'].' '.$_SESSION['apellido'].'<br>';
+                                        echo $_SESSION['email'];
+
+                                        ?>
                                     </p>
                                 </li>
-                                <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#"></a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#"></a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#"></a>
-                                        </div>
-                                    </div>
-                                    <!-- /.row -->
-                                </li>
+
+
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Perfil</a>
-                                    </div>
+
                                     <div class="pull-right">
-                                        <a href="<?php echo RUTA_URL . 'controlador/cerrar_session' ?>"
-                                            class="btn btn-default btn-flat">Salir</a>
+                                        <a href="<?php
+                                        session_unset();
+                                        session_destroy();
+                                        ?>" class="btn btn-default btn-flat">Cerrar Sesión
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
+
+
+
+
+
             </nav>
         </header>
-        <!-- Left side column. contains the logo and sidebar -->
+
+
+        <!-- *****************************    MENU LATERAL  *************************** -->
         <aside class="main-sidebar">
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
@@ -117,7 +111,7 @@
                 </div>
 
 
-                <!-- *****************************    MENU LATERAL  *************************** -->
+
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">Menu Principal</li>
                     <!-- Optionally, you can add icons to the links -->

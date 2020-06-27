@@ -186,11 +186,13 @@
                 <form id="frmlogin" method="POST">
                     <div class="form-group">
                         <label for="usuario">Usuario</label>
-                        <input id="usuario" class="form-control" type="text" name="usuario" required>
+                        <input id="usuario" class="form-control" type="text" name="usuario"
+                            placeholder='Usuario registrado' required>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input id="password" class="form-control" type="password" name="password" required>
+                        <input id="password" class="form-control" type="password" name="password"
+                            placeholder='Password del usuario' required>
                     </div>
                     <div class="form-group">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -215,6 +217,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
 </script>
+
+<script src="dist/js/adminlte.min.js"></script>
 
 <script src="<?php echo RUTA_URL; ?>/js/modulos/inicio.js"></script>
 

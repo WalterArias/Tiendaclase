@@ -103,6 +103,11 @@ class UsuarioModelo
             return false;
         } else {
             if (password_verify($datos['password'], $resultados[0]->usuario_pass)) {
+                ob_start();
+                session_start();
+                $_SESSION['nombre'] = $resultados[0]->usuario_nombre;
+                $_SESSION['apellido'] = $resultados[0]->usuario_apellido;
+                $_SESSION['email'] = $resultados[0]->usuario_email;
                 return true;
             } else {
                 return false;
