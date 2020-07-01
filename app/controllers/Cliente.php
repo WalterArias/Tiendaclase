@@ -92,4 +92,10 @@ class Cliente extends Controlador
         $datos = $this->clientemodelo->eliminarCliente($datos);
         echo json_encode($datos);
     }
+
+    public function listarCliente()
+    {
+        $datos = $this->clientemodelo->obtenerClientes();
+        $this->vista('Cliente/rptclientes.php');
+    }
 }
