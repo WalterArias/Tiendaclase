@@ -9,13 +9,7 @@ class RptCliente extends Controlador
 
     public function index()
     {
-        // ob_start();
-        // session_start();
-        // if (isset($_SESSION["nombre"])) {
-        //     $this->vista('Admin/AdminVista');
-        // } else {
-            $datos = 
-            $this->vista('Home/HomeVista');
-    //     }
-    // }
+        $datos = $this->clientemodelo->obtenerClientes();
+        $this->vista('Reportes/totalclientes', $datos);
+    }
 }

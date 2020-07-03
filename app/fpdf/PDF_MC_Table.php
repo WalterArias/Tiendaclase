@@ -1,11 +1,43 @@
 <?php
-require('../fpdf181/fpdf.php');
+require('fpdf.php');
 
 class PDF_MC_Table extends FPDF
 {
 var $widths;
 var $aligns;
 
+
+function Header()
+{
+	// Logo
+	//$this->Image('logo_pb.png',10,8,33);
+	// Arial bold 15
+
+	$this->SetFont('Courier','B',8);
+	// Movernos a la derecha
+	$this->Cell(10);
+	// Título
+	$this->Cell(180,5,'Tienda Caprichos Colombia - Nit.: 800.00.000-1 Telefono: 555512522',1,0,'C');
+	
+	// Salto de línea
+	$this->Ln(10);
+}
+
+// Pie de página
+function Footer()
+{
+	date_default_timezone_set('America/Bogota');
+	// Posición: a 1,5 cm del final
+	$this->SetY(-15);
+	// Arial italic 8
+	$this->SetFont('Courier','I',8);
+	// Número de página
+	$this->Cell(0,10,'Pagina: '.$this->PageNo().' de '.'{nb}',0,0,'C');
+	$this->Ln(5);
+	$this->Cell(0, 8, 'Fecha Impresión: '.date("d/m/Y H\hi:s"), 0, false, 'C', 0, '', 0, false, 'T', 'M'); 
+	
+	
+}
 function SetWidths($w)
 {
 	//Set the array of column widths
