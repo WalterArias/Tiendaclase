@@ -4,17 +4,17 @@ class Admin extends Controlador
 {
     public function __construct()
     {
+        
         // $this->clientemodelo = $this->modelo('ClienteModelo');
     }
    
     public function index()
     {
-        ob_start();
         session_start();
-        if (isset($_SESSION["nombre"])) {
+        if (isset($_SESSION['login'])) {
             $this->vista('Admin/AdminVista');
         } else {
-            $this->vista('Home/HomeVista');
+            die('falla en la variable de session');
         }
     }
 }

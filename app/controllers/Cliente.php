@@ -8,6 +8,7 @@ class Cliente extends Controlador
 {
     public function __construct()
     {
+       
         $this->clientemodelo = $this->modelo('ClienteModelo');
     }
 
@@ -19,7 +20,11 @@ class Cliente extends Controlador
      */
     public function index()
     {
-        $this->vista('Cliente/ClienteVista');
+        if (isset($_SESSION['nombre'])) {
+            $this->vista('Cliente/ClienteVista');
+        } else {
+            die('error en la sesion');
+        }
     }
     
     

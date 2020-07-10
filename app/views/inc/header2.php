@@ -55,6 +55,7 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <?php
+                               
                                 echo $_SESSION['nombre']
                                 ?>
                             </a>
@@ -66,9 +67,7 @@
                                     <p>
                                         <?php
                                         echo $_SESSION['nombre'].' '.$_SESSION['apellido'].'<br>';
-                                        echo $_SESSION['email'];
-
-                                        ?>
+         echo $_SESSION['email']; ?>
                                     </p>
                                 </li>
 
@@ -79,8 +78,7 @@
                                     <div class="pull-right">
                                         <a href="<?php
                                         session_unset();
-                                        session_destroy();
-                                        ?>" class="btn btn-default btn-flat">Cerrar Sesión
+         session_destroy(); ?>" class="btn btn-default btn-flat">Cerrar Sesión
                                         </a>
                                     </div>
                                 </li>
@@ -121,7 +119,8 @@
                             <span>Inicio</span></a>
                     </li>
                     <li class="item">
-                        <a href="<?php echo RUTA_URL . '/cliente' ?>">
+                        a href="index2.html" class="logo"
+                        <a href="#" id="Cliente">
                             <i class="icon-male"></i>
                             <span>Clientes</span></a>
                     </li>
