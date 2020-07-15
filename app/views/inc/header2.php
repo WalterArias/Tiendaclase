@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 
 <head>
@@ -56,7 +59,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <?php
                                
-                                echo $_SESSION['nombre']
+                                 echo $_SESSION['login'] ;
                                 ?>
                             </a>
                             <ul class="dropdown-menu">
@@ -66,8 +69,8 @@
 
                                     <p>
                                         <?php
-                                        echo $_SESSION['nombre'].' '.$_SESSION['apellido'].'<br>';
-         echo $_SESSION['email']; ?>
+               /*                          echo $_SESSION['nombre'].' '.$_SESSION['apellido'].'<br>';
+         echo $_SESSION['email']; */?>
                                     </p>
                                 </li>
 

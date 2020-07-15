@@ -1,20 +1,19 @@
 <?php
-
+  session_start();
 class Admin extends Controlador
 {
+    private $sesion;
     public function __construct()
     {
-        
-        // $this->clientemodelo = $this->modelo('ClienteModelo');
+        // $this->sesion = new Sesion();
     }
    
     public function index()
     {
-        session_start();
         if (isset($_SESSION['login'])) {
-            $this->vista('Admin/AdminVista');
+            redireccionar('/Admin');
         } else {
-            die('falla en la variable de session');
+            redireccionar('/home');
         }
     }
 }
