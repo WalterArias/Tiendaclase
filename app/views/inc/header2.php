@@ -1,5 +1,5 @@
 <?php
-  session_start();
+ session_start();
 ?>
 <!DOCTYPE html>
 
@@ -80,8 +80,8 @@
 
                                     <div class="pull-right">
                                         <a href="<?php
-                                        session_unset();
-         session_destroy(); ?>" class="btn btn-default btn-flat">Cerrar Sesión
+    /*                                     session_unset();
+         session_destroy(); */ ?>" class="btn btn-default btn-flat">Cerrar Sesión
                                         </a>
                                     </div>
                                 </li>

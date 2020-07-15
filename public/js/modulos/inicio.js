@@ -14,7 +14,7 @@ var enviar = function () {
         if (data == "false") {
           alert("el usuario o la clave NO coinciden!");
         } else {
-          window.location.href = RUTA_URL + "admin";
+          window.location.href = RUTA_URL + "Admin";
         }
       })
       .fail(function (data) {

@@ -19,7 +19,6 @@ class Usuario extends Controlador
      */
     public function index()
     {
-        session_start();
         $this->vista('Admin/Adminvista');
     }
     

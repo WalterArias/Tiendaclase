@@ -19,12 +19,7 @@ class Cliente extends Controlador
      */
     public function index()
     {
-        session_start();
-        if (isset($_SESSION['login'])) {
-            redireccionar('/Cliente');
-        } else {
-            redireccionar('/home');
-        }
+        $this->vista('Cliente/ClienteVista');
     }
     
     

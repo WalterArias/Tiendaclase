@@ -34,10 +34,11 @@
                     $login =  $datos[0]->usuario_login;
                     $_SESSION['login'] = $login;
                     echo json_encode('true');
+                } else {
+                    echo json_encode('false');
                 }
-
-
-                // echo json_encode($datos);
+            } else {
+                echo json_encode('false');
             }
         }
     }
