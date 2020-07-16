@@ -9,4 +9,12 @@ class Admin extends Controlador
     {
         $this->vista('Admin/Adminvista');
     }
+
+    public function cerrarSesion()
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+        redireccionar('/Home');
+    }
 }

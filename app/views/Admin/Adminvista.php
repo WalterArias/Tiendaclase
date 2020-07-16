@@ -20,4 +20,5 @@
 </script>
 <!-- AdminLTE App -->
 <script src="<?php echo RUTA_URL; ?>/js/adminlte.min.js"></script>
+<script src="<?php echo RUTA_URL; ?>/js/modulos/admin.js"></script>
 <?php require RUTA_APP . '/views/inc/footer2.php'; ?>

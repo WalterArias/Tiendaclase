@@ -1,6 +1,9 @@
 <?php
  session_start();
-?>
+ if (!isset($_SESSION['login'])) {
+     redireccionar('/Home');
+ } else {
+     ?>
 <!DOCTYPE html>
 
 <head>
@@ -59,18 +62,17 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <?php
                                
-                                 echo $_SESSION['login'] ;
-                                ?>
+                                 echo $_SESSION['login'] ; ?>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
-                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <!--  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">  -->
 
                                     <p>
                                         <?php
-               /*                          echo $_SESSION['nombre'].' '.$_SESSION['apellido'].'<br>';
-         echo $_SESSION['email']; */?>
+                                        echo $_SESSION['nombre'].' '.$_SESSION['apellido'].'<br>';
+     echo $_SESSION['email']; ?>
                                     </p>
                                 </li>
 
@@ -79,9 +81,9 @@
                                 <li class="user-footer">
 
                                     <div class="pull-right">
-                                        <a href="<?php
-    /*                                     session_unset();
-         session_destroy(); */ ?>" class="btn btn-default btn-flat">Cerrar Sesión
+
+                                        <a href="<?php echo RUTA_URL . '/Admin/cerrarSesion' ?>"
+                                            class="btn btn-default btn-flat">Cerrar Sesión
                                         </a>
                                     </div>
                                 </li>
@@ -122,8 +124,8 @@
                             <span>Inicio</span></a>
                     </li>
                     <li class="item">
-                        a href="index2.html" class="logo"
-                        <a href="#" id="Cliente">
+
+                        <a href="<?php echo RUTA_URL . '/Cliente' ?>">
                             <i class="icon-male"></i>
                             <span>Clientes</span></a>
                     </li>
@@ -143,7 +145,7 @@
                             <span>Pedidos</span></a>
                     </li>
                     <li class="item">
-                        <a href="<?php echo RUTA_URL . '/admin' ?>">
+                        <a href="<?php echo RUTA_URL . '/RptCliente' ?>">
                             <i class="icon-print"></i>
                             <span>Reportes</span></a>
                     </li>
@@ -154,3 +156,7 @@
             </section>
             <!-- /.sidebar -->
         </aside>
+
+        <?php
+ }
+    ?>

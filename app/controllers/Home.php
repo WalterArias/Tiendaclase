@@ -5,7 +5,6 @@
         private $sesion;
         public function __construct()
         {
-            //$this->sesion = new Sesion();
             $this->usuariomodelo = $this->modelo('UsuarioModelo');
         }
         
@@ -26,13 +25,11 @@
                     'password' =>  $clave];
                 $datos = $this->usuariomodelo->validarIngreso($datos);
                 if ($datos[0]->usuario_login!='') {
-                    /*       $this->sesion->init();
-                             $this->sesion->add('login', $datos[0]->usuario_login);
-                             $this->sesion->add('nombre', $datos[0]->usuario_nombre);
-                             $this->sesion->add('apellido', $datos[0]->usuario_apellido); */
                     session_start();
-                    $login =  $datos[0]->usuario_login;
-                    $_SESSION['login'] = $login;
+                    $_SESSION['login'] =  $datos[0]->usuario_login;
+                    $_SESSION['nombre'] =  $datos[0]->usuario_nombre;
+                    $_SESSION['apellido'] =  $datos[0]->usuario_apellido;
+                    $_SESSION['email'] =  $datos[0]->usuario_email;
                     echo json_encode('true');
                 } else {
                     echo json_encode('false');
