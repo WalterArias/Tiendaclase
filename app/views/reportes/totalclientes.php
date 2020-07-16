@@ -36,11 +36,11 @@ $pdf->SetWidths(array(58,50,50,25));
 
 foreach ($datos as $index => $valor) {
     $nombre = $valor ->clientenombre;
-    $apellido = $valor ->clienteapellidos;   
-    $email = $valor ->email;   
+    $apellido = $valor ->clienteapellidos;
+    $email = $valor ->email;
     $deuda = $valor ->Deuda;
     $pdf->SetFont('Courier', '', 8);
-    $pdf->Row(array($nombre,$apellido,$email,number_format($deuda,2)));
+    $pdf->Row(array($nombre,$apellido,$email,number_format($deuda, 2)));
 }
 
 
