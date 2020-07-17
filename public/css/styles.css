@@ -4,6 +4,10 @@ footer {
   color: #a9a9a9;
 }
 
+form {
+  margin: 0 auto;
+  padding: 25px;
+}
 form.formeditar input[type="text"] {
   width: 80%;
   height: 2%;

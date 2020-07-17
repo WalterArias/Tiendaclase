@@ -8,18 +8,15 @@
 
         <div class="row">
 
-            <div class="col-md-1">
-            </div>
-
-            <div class="col-md-11">
+            <div class="col-md-12">
 
 
-                <div class="card" id="vistatabla">
-                    <div class="card-header">
+                <div class="panel" id="vistatabla">
+                    <div class="panel-header">
                         <b>Cliente</b> <button type="button" id="nuevo" class="btn btn-success" data-toggle='tooltip'
                             title=' Agregar un cliente'> <i class="icon-plus"></i> </button>
                     </div>
-                    <div class="card-body">
+                    <div class="panel-body">
                         <table id="mitabla" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
@@ -38,11 +35,11 @@
                 </div>
 
 
-                <div class="card" id="formulario">
-                    <div class="card-header">
+                <div class="panel" id="formulario">
+                    <div class="panel-header">
                         <b>Cliente</b>
                     </div>
-                    <div class="card-body">
+                    <div class="panel-body">
                         <form class="formeditar" method="POST">
                             <div class="row">
                                 <div class="col-md-5">
@@ -63,8 +60,8 @@
                                     <label class="form-check-label">
                                         <label>Estado del cliente</label>
                                         <select class="form-control" id="estado" name="estado">
-                                            <option>Activo</option>
-                                            <option>Inactivo</option>
+                                            <option>A</option>
+                                            <option>I</option>
 
                                         </select>
                                     </label>
@@ -77,7 +74,7 @@
 
                                 </div>
                             </div>
-                            <div class="card-footer">
+                            <div class="panel-footer">
                                 <button class="btn btn-primary" type="button" id="imprimir"><i class="icon-print"></i>
                                     Imprimir</button>
                                 <button class="btn btn-primary" type="button" id="cancelar"><i class="icon-reply"></i>

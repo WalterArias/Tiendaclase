@@ -16,12 +16,6 @@ class ClienteModelo
         return $resultados;
     }
 
-    public function contarClientes()
-    {
-        $this->db->query('SELECT count(*) from Cliente');
-        $resultados = $this->db->registros();
-        return $resultados;
-    }
 
     public function mostrarUnCliente()
     {
@@ -87,5 +81,25 @@ class ClienteModelo
         } else {
             return false;
         }
+    }
+
+    public function contarClientesActivos()
+    {
+        $this->db->query("SELECT COUNT(*) FROM cliente WHERE estado = 'A'");
+        $resultados = $this->db->registros();
+        return $resultados;
+    }
+    public function contarClientesInactivos()
+    {
+        $this->db->query("SELECT COUNT(*) FROM cliente WHERE estado = 'I'");
+        $resultados = $this->db->registros();
+        return $resultados;
+    }
+    
+    public function contarClientesTotal()
+    {
+        $this->db->query('SELECT count(*) from Cliente');
+        $resultados = $this->db->registros();
+        return $resultados;
     }
 }

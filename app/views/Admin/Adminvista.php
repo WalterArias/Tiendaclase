@@ -1,11 +1,60 @@
 <?php require RUTA_APP . '/views/inc/header2.php'; ?>
 <!-- Content Wrapper. Contains page content -->
-
 <div class="content-wrapper">
-
     <!-- Main content -->
-    <section class="content container-fluid">
-        <h1>estas en la vista del admin</h1>
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="col-lg-3 col-xs-6">
+                        <div class="small-box bg-aqua">
+                            <div class="inner">
+                                <h4 style="font-size:17px;">
+                                    <strong></strong>
+                                </h4>
+                                <p>Activos </p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-bag"></i>
+                            </div>
+                            <a href="ingreso.php" class="small-box-footer">Clientes <i
+                                    class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-6">
+                        <div class="small-box bg-aqua">
+                            <div class="inner">
+                                <h4 style="font-size:17px;">
+                                    <strong></strong>
+                                </h4>
+                                <p>Activos </p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-bag"></i>
+                            </div>
+                            <a href="ingreso.php" class="small-box-footer">Clientes <i
+                                    class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-6">
+                        <div class="small-box bg-aqua">
+                            <div class="inner">
+                                <h4 style="font-size:17px;">
+                                    <strong></strong>
+                                </h4>
+                                <p>Activos </p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-bag"></i>
+                            </div>
+                            <a href="ingreso.php" class="small-box-footer">Clientes <i
+                                    class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 </div>
@@ -19,6 +68,8 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
 </script>
 <!-- AdminLTE App -->
-<script src="<?php echo RUTA_URL; ?>/js/adminlte.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
 <script src="<?php echo RUTA_URL; ?>/js/modulos/admin.js"></script>
 <?php require RUTA_APP . '/views/inc/footer2.php'; ?>
