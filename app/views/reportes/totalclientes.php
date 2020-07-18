@@ -1,11 +1,6 @@
 <?php
-
-
 //Incluímos a la clase PDF_MC_Table
-
-
 require RUTA_APP.'/fpdf/PDF_MC_Table.php' ;
-
 //Instanciamos la clase para generar el documento pdf
 $pdf=new PDF_MC_Table();
 $pdf->AliasNbPages();
