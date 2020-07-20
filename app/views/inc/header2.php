@@ -10,15 +10,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><?= NAME_APP . ' Version: ' . VERSION_APP; ?></title>
-
-
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-
-    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
-        rel="stylesheet"> -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css" />
     <link rel="stylesheet" type="text/css"
@@ -26,6 +21,8 @@
     <link rel="stylesheet" href="<?php echo RUTA_URL; ?>/css/AdminLTE.min.css">
     <link rel="stylesheet" href="<?php echo RUTA_URL; ?>/css/skin-blue.min.css">
     <link rel="stylesheet" href="<?php echo RUTA_URL; ?>/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">

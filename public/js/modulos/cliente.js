@@ -8,15 +8,15 @@ var listarcliente = function () {
     columns: [
       {
         defaultContent:
-          "<button type='button' class ='editar btn btn-secundary' data-toggle='tooltip' data-placement='top' title='Edita un cliente'> <i class='icon-edit'></i></button>",
+          "<button type='button' class ='editar btn btn-primary' data-toggle='tooltip' data-placement='top' title='Edita un cliente'> <i class='icon-edit' ></i></button>",
       },
       {
         defaultContent:
-          "<button type='button' class ='eliminar btn btn-secondary' data-toggle='tooltip' data-placement='top' title='Elimina un cliente'> <i class='icon-trash'></i></button>",
+          "<button type='button' class ='eliminar btn btn-primary' data-toggle='tooltip' data-placement='top' title='Elimina un cliente'> <i class='icon-trash'></i></button>",
       },
       {
         defaultContent:
-          "<button type='button' class ='imprimir btn btn-secondary' data-toggle='tooltip' data-placement='top' title='Imprimir'> <i class='icon-print'></i></button>",
+          "<button type='button' class ='imprimir btn btn-primary' data-toggle='tooltip' data-placement='top' title='Imprimir'> <i class='icon-print'></i></button>",
       },
       {
         data: "idcliente",
