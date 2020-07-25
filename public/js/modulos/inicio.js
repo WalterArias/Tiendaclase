@@ -4,7 +4,7 @@ var enviar = function () {
     e.preventDefault();
     var datos = new FormData($("#frmlogin")[0]);
     $.ajax({
-      url: RUTA_URL + "home/ValidarIngreso",
+      url: RUTA_URL + "Home/ValidarIngreso",
       method: "POST",
       data: datos,
       processData: false,
